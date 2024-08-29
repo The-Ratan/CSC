@@ -1,0 +1,34 @@
+@media screen and (min-device-width: 320px) and (max-device-width: 768px) {
+    .manunav {
+        position: relative;
+    }
+
+
+    #chkicon {
+        position: absolute;
+        color:white;
+        left: 135px;
+        top: -60px;
+        /* opacity: 1; */
+        z-index: 1;
+        cursor: pointer;
+        /* position: fixed; */
+    }
+
+    .sidebarmanu {
+        position: absolute;
+        left: -60px;
+        background-color: red;
+        /* position: fixed; */
+        opacity: 1;
+        left: -90px;
+        transition: all 0.5s;
+        /* position: fixed; */
+    }
+
+    #chkicon:checked~.sidebarmanu {
+        left: 0px;
+
+    }
+
+}

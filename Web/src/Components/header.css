@@ -1,0 +1,23 @@
+@media (max-width: 991px) {
+  .displl {
+    display: none;
+  }
+}
+
+/* medium and up screens */
+@media (min-width: 768px) {
+    
+}
+
+
+@media (max-width: 767px) {
+  .displl {
+    display: none;
+  }
+}
+
+/* medium and up screens */
+@media (min-width: 768px) {
+    
+
+}

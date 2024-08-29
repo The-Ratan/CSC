@@ -1,0 +1,70 @@
+.active-tab {
+  background-color: #007bff;
+  color: #fff; 
+}
+
+.click:hover {
+  /*opacity: 0.3;*/
+  border: 8px solid rgb(2, 34, 121);
+  border-radius: 6px;
+  /* Equal to scaleX(2) scaleY(2) */
+  transition-duration: 0.2s;
+  transform: scale(1.1);
+}
+
+.clickk:hover {
+  /*opacity: 0.3;*/
+  /* border: 2px solid rgb(2, 34, 121) ; */
+  font-size: 20px;
+  /* border-radius:2px ; */
+  /* Equal to scaleX(2) scaleY(2) */
+  transition-duration: 0.1s;
+  transform: scale(1.1);
+}
+
+.clickk1:hover {
+  font-size: 16px;
+  transform: scale(1.1);
+}
+
+
+
+.clickkside:hover {
+  font-size: 16px;
+  transform: scale(1.1);
+}
+
+
+.clickksidebutton:hover {
+  font-size: 16px;
+  transform: scale(1.1);
+  background-color: rgb(7, 88, 88);
+  color: white;
+}
+
+.clickdata:hover {
+  cursor: pointer;
+  /* font-size: 20px; */
+  transform: scale(1);
+  /* background-color: black; */
+  /* border-radius: 5%; */
+  color: black;
+  font-style: var(#fff);
+  border-bottom: 3px solid blue;
+}
+
+
+
+
+
+
+
+.clickdataterm:hover {
+  cursor: pointer;
+  font-size: 17px;
+  transform: scale(1);
+ }
+
+
+
+

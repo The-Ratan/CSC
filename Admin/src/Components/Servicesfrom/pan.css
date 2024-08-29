@@ -1,0 +1,30 @@
+
+    @media screen and (min-device-width: 320px) and (max-device-width:600px) {
+
+.navbarhello {
+    position: relative;
+    background-color: aquamarine;
+}
+
+#hellechk {
+    position: absolute;
+    left: 50px;
+    top: 0px;
+}
+
+.sidehello {
+    position: absolute;
+    background-color: rgb(94, 255, 0);
+    right: 70px;
+    top: 40px;
+    transition: all 0.5s;
+    position: fixed;
+}
+
+#hellechk:checked~.sidehello {
+    right: 0px;
+
+}
+
+
+}

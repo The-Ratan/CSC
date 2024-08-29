@@ -1,0 +1,62 @@
+
+@media (max-width: 991px) {
+  .displayy {
+    margin-left: -42px;
+  }
+}
+
+/* medium and up screens */
+@media (min-width: 768px) {
+  .displayy {
+    margin-left: 60px;
+  }
+    
+}
+
+
+@media (max-width: 767px) {
+  .displayy {
+    margin-left: -42px;
+  }
+}
+
+/* medium and up screens */
+@media (min-width: 768px) {
+    
+  .displayy {
+    margin-left: 60px;
+  }
+}
+
+
+/* Your CSS file */
+
+.arrow-left::before {
+  content: "\25C0";
+}
+
+.arrow-right::before {
+  content: "\25B6";
+}
+
+/* .arrow-down::before {
+  content: "\25BC"; 
+}
+
+.arrow-up::before {
+  content: "\25B2"; 
+} */
+/* <span>Left Arrow: {"\u25C0"}</span>
+      <span>Right Arrow: {"\u25B6"}</span> */
+
+
+/* .ws-toggle-popup {
+  position: absolute;
+  top: 50px; 
+  left: 0;
+  display: none;
+}
+
+.header-widget:hover .ws-toggle-popup {
+  display: block;
+} */

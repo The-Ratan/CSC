@@ -1,0 +1,144 @@
+const [input1, setinput1] = useState("");
+const [input2, setinput2] = useState("");
+const [document1, setdocument1] = useState("");
+const [document2, setdocument2] = useState("");
+const [output , setoutput] = useState('');
+const senddata = () => {
+
+  if(!input1){
+    setoutput("Please Enter All Details")
+    return;
+  }
+  if(!input2){
+    setoutput("Please Enter All Details")
+    return;
+  }
+  if(!document1){
+    setoutput("Please Enter All Details")
+    return;
+  }
+  if(!document2){
+    setoutput("Please Enter All Details")
+    return;
+  }
+  let tokenn = localStorage.getItem("operatortoken");
+
+  const options = {
+    headers: {
+      token: tokenn,
+    },
+  };
+
+  const formdata = new FormData();
+  formdata.append("user_id", pancard?.user_id);
+  formdata.append("_id", pancard?._id);
+  formdata.append("input1", input1);
+  formdata.append("input2", input2);
+  formdata.append("document1", document1);
+  formdata.append("document2", document2);
+  axios
+    .post(
+      "http://103.104.74.215:3099/admin/pancard_document",
+      formdata,
+      options
+    )
+    .then((response) => {
+      console.log("asd", response);
+      toast.success(response.data.msg);
+    })
+    .catch((error) => {
+      console.log("error", error);
+    });
+};
+
+
+
+
+
+ 
+
+
+
+<div className="sf-provi-qform">
+          <div style={{ marginLeft: "20px" }}>
+          <font style={{color:'red'}}>{output}</font>
+            <div className="row">
+              <div className="col-md-6">
+                <div className="form-group">
+                  <label>Enter Detail</label>
+                  <input
+                    onChange={(e) => setinput1(e.target.value)}
+                    value={input1}
+                    name="name"
+                    type="text"
+                    required
+                    className="form-control"
+                  />
+                </div>
+              </div>
+              <div className="col-md-6">
+                <h4>UPLOAD DOCUMENT</h4>
+                <div className="aon-inputicon-box">
+                  <div className="radio-inline-box service-perform-list">
+                    <div className="checkbox sf-radio-checkbox sf-radio-check-2">
+                      <input
+                        required
+                        onChange={(e) => setdocument1(e.target.files[0])}
+                        type="file"
+                        accept="image/*"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <br />
+              <br />
+              <br />
+              <br />
+
+              <div className="col-md-6">
+                <div className="form-group">
+                  <label>Enter Detail</label>
+                  <input
+                    onChange={(e) => setinput2(e.target.value)}
+                    value={input2}
+                    name="name"
+                    type="text"
+                    required
+                    className="form-control"
+                  />
+                </div>
+              </div>
+              <div className="col-md-6 ">
+                <h4>UPLOAD DOCUMENT</h4>
+                <div className="aon-inputicon-box">
+                  <div className="radio-inline-box service-perform-list">
+                    <div className="checkbox sf-radio-checkbox sf-radio-check-2">
+                      <input
+                        required
+                        onChange={(e) => setdocument2(e.target.files[0])}
+                        type="file"
+                        accept="image/*"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="col-md-12 ">
+                <div className="aon-inputicon-box">
+                  <div className="radio-inline-box service-perform-list">
+                    <div className="checkbox sf-radio-checkbox sf-radio-check-2">
+                      <button onClick={senddata} className="btn btn-success">
+                        Upload
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div></div>
+            </div>
+          </div>
+        </div>
